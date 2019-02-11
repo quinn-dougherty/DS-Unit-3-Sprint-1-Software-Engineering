@@ -58,5 +58,6 @@ If you get through all the steps, try some of the following stretch goals:
   `pipenv` build on) gets things from by default. For now stick with Test PyPI
   for your own publishing, but you can work to make things "real"!
 
-# MY ASSIGNMENT: [click here](https://test.pypi.org/project/lambdata-quinndougherty/)
+# MY ASSIGNMENT: [click here to view package on PyPI](https://test.pypi.org/project/lambdata-quinndougherty/)
 - all your confusion matrix needs
+- [demonstration in notebook here](https://colab.research.google.com/drive/1AntgaY6DlcAE5zS3eF9vLctKI7qGyVjK)

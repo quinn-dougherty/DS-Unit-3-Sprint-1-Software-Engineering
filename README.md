@@ -19,4 +19,8 @@ making the lambdata repo yourself - it will *not* be a fork, and you can have
 more independence and "creative control** in where you take it. You should still
 fork and open a PR to this repo, and edit this file to link to your lambdata.
 
-**My lambdata repository**: *you edit here*
+### **[My lambdata repository](https://test.pypi.org/project/lambdata-quinndougherty/)**
+
+> python package with helper funcs for data science
+
+> assignment for DS1 unit3 week1, Lambda School
