@@ -57,3 +57,6 @@ If you get through all the steps, try some of the following stretch goals:
   `pip` (the official base Python package installer, which both Anaconda and
   `pipenv` build on) gets things from by default. For now stick with Test PyPI
   for your own publishing, but you can work to make things "real"!
+
+# MY ASSIGNMENT: [click here](https://test.pypi.org/project/lambdata-quinndougherty/)
+- all your confusion matrix needs
