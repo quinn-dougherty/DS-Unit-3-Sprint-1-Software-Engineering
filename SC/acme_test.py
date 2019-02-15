@@ -36,8 +36,8 @@ class AcmeProductTests(unittest.TestCase):
 
     def test_explode(self):
         """test the explode method"""
-        prod1 = Product('test prod 1', weight=400, flammability=400)
-        prod2 = Product("not explosive", weight=1, flammability=exp(-4))
+        prod1 = Product('test prod 1', weight=400, flammability=400.0)
+        prod2 = Product("not explosive", weight=1, flammability=exp(-4.0))
         #glove = BoxingGlove("adonis creed")
         self.assertEqual(prod1.explode(), "...BABOOOM!")
         self.assertEqual(prod2.explode(), "...fizzle.")

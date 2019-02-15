@@ -22,11 +22,17 @@ class Product:
         identifier=randint(
             1000000,
             9999999 + 1)):
-        self.name = name
-        self.price = price
-        self.weight = weight
-        self.flammability = flammability
-        self.identifier = identifier
+
+        if isinstance(name, str):
+            self.name = name
+        if isinstance(price, int):
+            self.price = price
+        if isinstance(weight, int):
+            self.weight = weight
+        if isinstance(flammability, float):
+            self.flammability = flammability
+        if isinstance(identifier, int):
+            self.identifier = identifier
 
     def stealability(self) -> str:
         '''no args just reads from state, returns string
@@ -36,6 +42,7 @@ class Product:
         stealable...", if it is greater or equal to 0.5 but less
         than 1.0 return "Kinda stealable.", and otherwise
         return "Very stealable!"'''
+        assert self.weight != 0
         x = divide(self.price, self.weight)
         if x < 0.5:
             return "Not so stealable..."
@@ -82,13 +89,13 @@ class BoxingGlove(Product):
                      1)):
         super().__init__(name, price, weight, flammability, identifier)
 
-    def explode(self):
+    def explode(self) -> str:
         return "...it's a glove."
 
-    def punch(self):
+    def punch(self) -> str:
         if self.weight < 5:
             return "That tickles."
-        elif self.weight >= 5 and self.weight < 15:
+        elif 5 <= self.weight < 15:
             return "Hey that hurt!"
         else:
             return "OUCH!"
