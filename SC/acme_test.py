@@ -9,8 +9,13 @@ Add at least 2 more test methods to AcmeProductTests for the base Product class:
 import unittest
 from acme import Product, BoxingGlove
 from acme_report import generate_products, ADJECTIVES, NOUNS
-from numpy import exp, divide
 from itertools import product as cart
+
+
+def divide(x, y): return x / y
+
+
+def exp(x): return 2 ** x
 
 
 class AcmeProductTests(unittest.TestCase):
@@ -40,8 +45,8 @@ class AcmeProductTests(unittest.TestCase):
 
     def test_stealability(self):
         """test stealability method"""
-        very = Product('rocky', weight=1, price=2**40)
-        notatall = Product("rocks", weight=2**40, price=1)
+        very = Product('rocky', weight=1, price=exp(40))
+        notatall = Product("rocks", weight=exp(40), price=1)
         self.assertEqual(very.stealability(), "Very stealable!")
         self.assertEqual(notatall.stealability(), "Not so stealable...")
 

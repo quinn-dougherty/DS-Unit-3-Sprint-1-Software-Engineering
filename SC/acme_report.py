@@ -20,10 +20,13 @@ For the report, you should calculate and print the following values:
 '''
 
 
-import numpy.random as rn
-from numpy import divide as dv
+import random as rn
 from functools import reduce
 from acme import Product
+
+
+def dv(x, y): return x / y
+
 
 N = 30
 ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
@@ -41,7 +44,7 @@ def generate_products(n=N):
             weight=rn.randint(
                 5,
                 100 + 1),
-            flammability=2.5 * rn.ranf())
+            flammability=2.5 * rn.random())
         for _ in range(n)]
     return prods
 

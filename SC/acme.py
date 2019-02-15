@@ -6,8 +6,10 @@
 
 
 '''
-from numpy.random import randint
-from numpy import divide
+from random import randint
+
+
+def divide(x, y): return x / y
 
 
 class Product:
@@ -37,7 +39,7 @@ class Product:
         x = divide(self.price, self.weight)
         if x < 0.5:
             return "Not so stealable..."
-        elif x >= 0.5 and x < 1:
+        elif 0.5 <= x < 1:
             return "Kinda stealable."
         else:
             return "Very stealable!"
@@ -53,7 +55,7 @@ class Product:
         x = self.flammability * self.weight
         if x < 10:
             return "...fizzle."
-        elif x >= 10 and x < 50:
+        elif 10 <= x < 50:
             return "...boom!"
         else:
             return "...BABOOOM!"
@@ -69,16 +71,15 @@ class BoxingGlove(Product):
     less than 15, and "OUCH!" otherwise
     '''
 
-    def __init__(
-        self,
-        name,
-        price=10,
-        weight=10,
-        flammability=0.5,
-        identifier=randint(
-            1000000,
-            9999999 +
-            1)):
+    def __init__(self,
+                 name,
+                 price=10,
+                 weight=10,
+                 flammability=0.5,
+                 identifier=randint(
+                     1000000,
+                     9999999 +
+                     1)):
         super().__init__(name, price, weight, flammability, identifier)
 
     def explode(self):
