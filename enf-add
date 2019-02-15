@@ -1,0 +1,5 @@
+#!/bin/bash 
+
+autopep8 -r --in-place -v --aggressive $1
+git add .
+
