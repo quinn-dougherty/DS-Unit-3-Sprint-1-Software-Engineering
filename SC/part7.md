@@ -1,4 +1,4 @@
-# _Why is code review important
+# _Why is code review important_
 
 Code review is a great way to keep a team responsible for each other. 
 
@@ -7,12 +7,12 @@ A team has 3 kinds of people:
 2. _future you_
 3. _not you_
 
-The goals of style enforcement and code review practices are to keep _all three of these parties satified_, **minimizing** stress for everyone. 
+The goals of style enforcement and code review practices are to keep _all three of these parties satisfied_, **minimizing** stress for everyone. 
 
 ### What I like to see 
-When I'm reviewing code, I really like to see input and output types very clearly in docstrings. a method's docstring should make input and output extremely easy to read. The second thing that should pop out in a docstring is side effects. If state is mutated in the function (like `x+= foo` where `x` is some global variable, instance attribute, etc.) then a priority of a docstring is to alert me to this. After that, description of the computation in plain english is nice, but if i could only pick two, i'd pick type info and side effect info.
+When I'm reviewing code, I really like to see **input and output types** very clearly in docstrings. A method's docstring should make input and output extremely easy to read. The second thing that should pop out in a docstring is **side effects**. If *state is mutated* in the function (like `x+= foo` where `x` is some global variable, instance attribute, etc.) then a priority of a docstring is to alert me to this. After that, description of the computation in plain english is nice, but if i could only pick two, i'd pick type info and side effect info.
 
-### attributes I appreciate in a reviewer 
+### Attributes I appreciate in a reviewer 
 I think the most important piece of information a reviewer can give me is if my variable names are intuitive, legible, and useful. 
 
 If you find my variables are too tearse and unhelpful, I want to know about it. If you think they're longer than necessary, then let's make them shorter. 
